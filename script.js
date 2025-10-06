@@ -57,3 +57,10 @@ function renderBids() {
         maxBidderDiv.innerHTML = "No bids yet.";
     }
 }
+function clearBids() {
+    bidHistory = [];
+    maxBid = 0;
+    localStorage.removeItem("bidHistory");
+    localStorage.removeItem("maxBid");
+    renderBids();
+}
